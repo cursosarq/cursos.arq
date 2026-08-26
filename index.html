@@ -154,8 +154,8 @@
   @media(max-width:520px){.bonus-grid{grid-template-columns:1fr;}}
 
   .instructor{display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:start;}
-  .instructor .frame{aspect-ratio:1;border:1px solid var(--line-dim);display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--line-dim);position:relative;background:linear-gradient(180deg,var(--ink-2),var(--ink));overflow:hidden;}
-  .instructor .frame img{filter:grayscale(1) sepia(1) hue-rotate(178deg) saturate(2.4) brightness(0.85) contrast(1.1);mix-blend-mode:luminosity;opacity:0.92;}
+  .instructor .frame{aspect-ratio:1;border:1px solid var(--line-dim);position:relative;overflow:hidden;background:linear-gradient(180deg,var(--ink-2),var(--ink));}
+  .instructor .frame::before{content:"";position:absolute;inset:0;background-image:url('erick_vargas-removebg-preview.png');background-repeat:no-repeat;background-size:150% auto;background-position:37% 24%;filter:grayscale(1) sepia(1) hue-rotate(178deg) saturate(2.4) brightness(0.85) contrast(1.1);}
   .instructor .frame span{position:absolute;bottom:10px;left:10px;text-transform:uppercase;letter-spacing:0.06em;background:rgba(14,36,56,0.75);padding:3px 7px;border:1px solid var(--line-dim);z-index:2;}
   .instructor .frame svg{width:62%;height:62%;}
   .instructor h3{font-size:22px;margin-bottom:4px;}
@@ -370,7 +370,6 @@
 <section class="on-dark">
   <div class="wrap instructor">
     <div class="frame">
-      <img src="erick_vargas-removebg-preview.png" alt="Erick Vargas, arquitecto e instructor del curso" style="width:100%;height:100%;object-fit:cover;object-position:46% 8%;"/>
       <span>ARQ. E. VARGAS</span>
     </div>
     <div>
