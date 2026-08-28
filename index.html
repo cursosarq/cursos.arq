@@ -104,7 +104,7 @@
 
   @media(max-width:600px){.info-pills{flex-direction:column;}}
 
-  .stats{background:var(--ink-2);color:var(--paper);border-top:1px solid var(--line-dim);border-bottom:1px solid var(--line-dim);}
+  .stats{background:var(--ink-2);color:var(--paper);border-top:1px solid var(--line-dim);border-bottom:1px solid var(--line-dim);position:relative;}
   .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);}
   .stat{padding:26px 20px;border-right:1px solid var(--line-dim);text-align:center;}
   .stat:last-child{border-right:none;}
@@ -113,6 +113,8 @@
   @media(max-width:700px){.stats-grid{grid-template-columns:repeat(2,1fr);} .stat{border-bottom:1px solid var(--line-dim);} .stat:nth-child(2n){border-right:none;}}
 
   section{padding:88px 0;position:relative;}
+  section::before,.stats::before,footer::before{content:"";position:absolute;inset:0;z-index:-1;background-size:36px 36px;background-image:linear-gradient(rgba(32,32,28,0.05) 1px, transparent 1px),linear-gradient(90deg, rgba(32,32,28,0.05) 1px, transparent 1px);}
+  .on-dark::before,.stats::before,footer::before{background-image:linear-gradient(rgba(159,198,232,0.06) 1px, transparent 1px),linear-gradient(90deg, rgba(159,198,232,0.06) 1px, transparent 1px);}
   .sheet-tag{position:absolute;top:30px;right:24px;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--line-dim);border:1px solid var(--line-dim);background:var(--paper);padding:4px 10px;z-index:2;}
   .on-dark .sheet-tag{color:var(--line);background:var(--ink);}
   @media(max-width:760px){.sheet-tag{position:static;display:inline-block;margin-bottom:16px;}}
@@ -212,7 +214,7 @@
   .faq-item[open] summary .chev{transform:rotate(45deg);}
   .faq-item .a{padding:0 4px 20px;color:#4A4A42;font-size:14.5px;max-width:64ch;}
 
-  footer{background:var(--ink);color:var(--paper);padding:50px 0 30px;border-top:1px solid var(--line-dim);}
+  footer{background:var(--ink);color:var(--paper);padding:50px 0 30px;border-top:1px solid var(--line-dim);position:relative;overflow:hidden;}
   .foot-grid{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;margin-bottom:30px;}
   .foot-tb{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line-dim);font-family:'IBM Plex Mono',monospace;font-size:10px;}
   .foot-tb div{padding:8px 12px;border-right:1px solid var(--line-dim);}
